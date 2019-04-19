@@ -11,13 +11,13 @@ using System.Web;
 public class GetDropDownBirthDayInfo
 {
 
-    public List<BirthYears> GetBirthYearList()
+    public List<BirthYears> GetBirthYearList(int YearsBack)
     {
         List<BirthYears> YearList = new List<BirthYears>();
-        //Need to loop to get 100 years in to a selectable list, Just do a 100 to be safe
+        //Need to loop to get years Passed in to this class a selectable list
         DateTime CurrentDate = DateTime.Now;
         YearList.Add(new BirthYears() { Value = 00, Name = "Select a Birth Year" });
-        for (int i = CurrentDate.Year ; i > CurrentDate.AddYears(-100).Year; i--)
+        for (int i = CurrentDate.Year ; i > CurrentDate.AddYears(-YearsBack).Year; i--)
         {
             YearList.Add(new BirthYears() { Value = i, Name = i.ToString() });
         }
