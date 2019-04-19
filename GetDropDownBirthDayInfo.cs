@@ -6,7 +6,7 @@ using System.Web;
 /// <summary>
 /// Written By Thermalnuke (https://github.com/Thermalnuke)
 /// Helper class to Return List of Month Days, List of Months, List of Years (Past 100 Years)
-/// Useful with Web Form requesting Birthday info from user
+/// Useful with Web Form requesting Birthday info from user.
 /// </summary>
 public class GetDropDownBirthDayInfo
 {
