@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-/// <summary>
-/// Written By Thermalnuke (https://github.com/Thermalnuke)
-/// Helper class to Return List of Month Days, List of Months, List of Years (Past 100 Years)
-/// Useful with Web Form requesting Birthday info from user.
-/// </summary>
+//Description: Helper class to Return List of Month Days, List of Months, List of Years (Past 100 Years)
+//             Useful with Web Form requesting Birthday info from user.
+//Auther: Patrick Thompson (https://github.com/Thermalnuke)
+//Date: 4/17/2019
+
 public class GetDropDownBirthDayInfo
 {
-
     public List<BirthYears> GetBirthYearList(int YearsBack)
     {
         List<BirthYears> YearList = new List<BirthYears>();
