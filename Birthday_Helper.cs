@@ -8,7 +8,7 @@ using System.Web;
 //Auther: Patrick Thompson (https://github.com/Thermalnuke)
 //Date: 4/17/2019
 
-public class GetDropDownBirthDayInfo
+public class Birthday_Helper
 {
     public List<BirthYears> GetBirthYearList(int YearsBack)
     {
