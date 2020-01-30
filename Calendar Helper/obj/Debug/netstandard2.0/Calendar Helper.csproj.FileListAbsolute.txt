@@ -1,0 +1,8 @@
+C:\Projects\Calendar-Helper\Calendar Helper\bin\Debug\netstandard2.0\Calendar Helper.deps.json
+C:\Projects\Calendar-Helper\Calendar Helper\bin\Debug\netstandard2.0\Calendar Helper.dll
+C:\Projects\Calendar-Helper\Calendar Helper\obj\Debug\netstandard2.0\Calendar Helper.csprojAssemblyReference.cache
+C:\Projects\Calendar-Helper\Calendar Helper\obj\Debug\netstandard2.0\Calendar Helper.AssemblyInfoInputs.cache
+C:\Projects\Calendar-Helper\Calendar Helper\obj\Debug\netstandard2.0\Calendar Helper.AssemblyInfo.cs
+C:\Projects\Calendar-Helper\Calendar Helper\bin\Debug\netstandard2.0\Calendar Helper.pdb
+C:\Projects\Calendar-Helper\Calendar Helper\obj\Debug\netstandard2.0\Calendar Helper.dll
+C:\Projects\Calendar-Helper\Calendar Helper\obj\Debug\netstandard2.0\Calendar Helper.pdb

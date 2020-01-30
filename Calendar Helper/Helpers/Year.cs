@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static Calendar_Helper.ListObjects;
+using static Calendar_Helper.CreateList;
 
 namespace Calendar_Helper
 {
-    public static class Year
+    internal static class Year
     {
-        public static List<Years> GetYearList(int YearsBack)
+        internal static List<Years> GetYearList(int YearsBack)
         {
             List<Years> YearList = new List<Years>();
             //Need to loop to get years Passed in to this class a selectable list
