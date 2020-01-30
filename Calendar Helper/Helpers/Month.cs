@@ -12,8 +12,7 @@ namespace Calendar_Helper
         {
             // Create a new Month list
             List<Months> MonthsList = new List<Months>();
-            // Add Default Value for list
-            MonthsList.Add(new Months() { Value = 00, Name = "Select a Month" });
+
             //Loop through months and create list
             for (int i = 1; i <= 12; i++)
             {

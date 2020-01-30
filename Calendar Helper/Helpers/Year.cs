@@ -12,7 +12,7 @@ namespace Calendar_Helper
             List<Years> YearList = new List<Years>();
             //Need to loop to get years Passed in to this class a selectable list
             DateTime CurrentDate = DateTime.Now;
-            YearList.Add(new Years() { Value = 00, Name = "Select a Year" });
+
             for (int i = CurrentDate.Year; i > CurrentDate.AddYears(-YearsBack).Year; i--)
             {
                 YearList.Add(new Years() { Value = i, Name = i.ToString() });

@@ -16,9 +16,14 @@ namespace Calendar.Test
             List<CreateList.Years> years = new List<CreateList.Years>();
             List<CreateList.Months> months = new List<CreateList.Months>();
             List<CreateList.Days> days = new List<CreateList.Days>();
-            days.Add(new CreateList.Days() { Name = "Test", Value = 0 });
-            months.Add(new CreateList.Months() { Name="Test", Value = 0});
-            years.Add(new CreateList.Years() { Name = "Test", Value = 0 });
+
+            days.Add(new CreateList.Days() { Name = "Test0", Value = 0 });
+            months.Add(new CreateList.Months() { Name="Test1", Value = 1});
+            years.Add(new CreateList.Years() { Name = "Test2", Value = 2 });
+
+            Console.WriteLine(days[0].Name.ToString() + " : " + days[0].Value.ToString());
+            Console.WriteLine(months[0].Name.ToString() + " : " + months[0].Value.ToString());
+            Console.WriteLine(years[0].Name.ToString() + " : " + years[0].Value.ToString());
         }
 
         [TestMethod]
@@ -47,18 +52,18 @@ namespace Calendar.Test
             var November = PMTCalendar.GetMonthDayList(11, 2020);
             var December = PMTCalendar.GetMonthDayList(12, 2020);
 
-            Console.WriteLine(January.Count(x => x.Value != 0));
-            Console.WriteLine(Febuary.Count(x => x.Value != 0));
-            Console.WriteLine(March.Count(x => x.Value != 0));
-            Console.WriteLine(April.Count(x => x.Value != 0));
-            Console.WriteLine(May.Count(x => x.Value != 0));
-            Console.WriteLine(June.Count(x => x.Value != 0));
-            Console.WriteLine(July.Count(x => x.Value != 0));
-            Console.WriteLine(August.Count(x => x.Value != 0));
-            Console.WriteLine(September.Count(x => x.Value != 0));
-            Console.WriteLine(October.Count(x => x.Value != 0));
-            Console.WriteLine(November.Count(x => x.Value != 0));
-            Console.WriteLine(December.Count(x => x.Value != 0));
+            Console.WriteLine("January: " + January.Count());
+            Console.WriteLine("Febuary: " + Febuary.Count());
+            Console.WriteLine("March: " + March.Count());
+            Console.WriteLine("April: " + April.Count());
+            Console.WriteLine("May: " + May.Count());
+            Console.WriteLine("June: " + June.Count());
+            Console.WriteLine("July: " + July.Count());
+            Console.WriteLine("August: " + August.Count());
+            Console.WriteLine("September: " + September.Count());
+            Console.WriteLine("October: " + October.Count());
+            Console.WriteLine("November: " + November.Count());
+            Console.WriteLine("December: " + December.Count());
 
         }
 
