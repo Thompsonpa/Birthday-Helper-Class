@@ -10,12 +10,12 @@ using System.Web;
 
 public class Birthday_Helper
 {
-    public List<BirthYears> GetBirthYearList(int YearsBack)
+    public List<Years> GetYearList(int YearsBack)
     {
         List<BirthYears> YearList = new List<BirthYears>();
         //Need to loop to get years Passed in to this class a selectable list
         DateTime CurrentDate = DateTime.Now;
-        YearList.Add(new BirthYears() { Value = 00, Name = "Select a Birth Year" });
+        YearList.Add(new BirthYears() { Value = 00, Name = "Select a Year" });
         for (int i = CurrentDate.Year ; i > CurrentDate.AddYears(-YearsBack).Year; i--)
         {
             YearList.Add(new BirthYears() { Value = i, Name = i.ToString() });
@@ -23,10 +23,11 @@ public class Birthday_Helper
         return YearList;
     }
 
-    public List<BirthMonths> GetBirthMonthList()
+    public List<Months> GetMonthList()
     {
-        List<BirthMonths> MonthsList = new List<BirthMonths>();
-        MonthsList.Add(new BirthMonths() { Value = 00, Name = "Select a Birth Month" });
+        List<Months> MonthsList = new List<BirthMonths>();
+        //Loop through months and create list
+        MonthsList.Add(new BirthMonths() { Value = 00, Name = "Select a Month" });
         MonthsList.Add(new BirthMonths() { Value = 01, Name = "January" });
         MonthsList.Add(new BirthMonths() { Value = 02, Name = "February" });
         MonthsList.Add(new BirthMonths() { Value = 03, Name = "March" });
@@ -42,10 +43,10 @@ public class Birthday_Helper
         return MonthsList;
     }
 
-    public List<BirthDays> GetBirthDayList()
+    public List<Days> GetMonthDayList(string Month)
     {
-        List<BirthDays> DayList = new List<BirthDays>();
-        DayList.Add(new BirthDays() { Value = 00, Name = "Select a Birth Day" });
+        List<Days> DayList = new List<Days>();
+        DayList.Add(new BirthDays() { Value = 00, Name = "Select a Day" });
         DayList.Add(new BirthDays() { Value = 01, Name = "01" });
         DayList.Add(new BirthDays() { Value = 02, Name = "02" });
         DayList.Add(new BirthDays() { Value = 03, Name = "03" });
@@ -80,19 +81,71 @@ public class Birthday_Helper
         return DayList;
     }
 
-    public class BirthYears
+    public List<Days> GetDayList()
+    {
+        List<Days> DayList = new List<Days>();
+        DayList.Add(new BirthDays() { Value = 00, Name = "Select a Day" });
+        for (int i = 1; i <= 31; i++)
+        {
+            if (i.ToString().Length == true)
+            {
+
+            }
+            DayList.Add(new BirthDays() { Value = i, Name = "01" });
+        }
+        
+        DayList.Add(new BirthDays() { Value = 01, Name = "01" });
+        DayList.Add(new BirthDays() { Value = 02, Name = "02" });
+        DayList.Add(new BirthDays() { Value = 03, Name = "03" });
+        DayList.Add(new BirthDays() { Value = 04, Name = "04" });
+        DayList.Add(new BirthDays() { Value = 05, Name = "05" });
+        DayList.Add(new BirthDays() { Value = 06, Name = "06" });
+        DayList.Add(new BirthDays() { Value = 07, Name = "07" });
+        DayList.Add(new BirthDays() { Value = 08, Name = "08" });
+        DayList.Add(new BirthDays() { Value = 09, Name = "09" });
+        DayList.Add(new BirthDays() { Value = 10, Name = "10" });
+        DayList.Add(new BirthDays() { Value = 11, Name = "11" });
+        DayList.Add(new BirthDays() { Value = 12, Name = "12" });
+        DayList.Add(new BirthDays() { Value = 13, Name = "13" });
+        DayList.Add(new BirthDays() { Value = 14, Name = "14" });
+        DayList.Add(new BirthDays() { Value = 15, Name = "15" });
+        DayList.Add(new BirthDays() { Value = 16, Name = "16" });
+        DayList.Add(new BirthDays() { Value = 17, Name = "17" });
+        DayList.Add(new BirthDays() { Value = 18, Name = "18" });
+        DayList.Add(new BirthDays() { Value = 19, Name = "19" });
+        DayList.Add(new BirthDays() { Value = 20, Name = "20" });
+        DayList.Add(new BirthDays() { Value = 21, Name = "21" });
+        DayList.Add(new BirthDays() { Value = 22, Name = "22" });
+        DayList.Add(new BirthDays() { Value = 23, Name = "23" });
+        DayList.Add(new BirthDays() { Value = 24, Name = "24" });
+        DayList.Add(new BirthDays() { Value = 25, Name = "25" });
+        DayList.Add(new BirthDays() { Value = 26, Name = "26" });
+        DayList.Add(new BirthDays() { Value = 27, Name = "27" });
+        DayList.Add(new BirthDays() { Value = 28, Name = "28" });
+        DayList.Add(new BirthDays() { Value = 29, Name = "29" });
+        DayList.Add(new BirthDays() { Value = 30, Name = "30" });
+        DayList.Add(new BirthDays() { Value = 31, Name = "31" });
+        return DayList;
+    }
+
+    public int DaysInMonth(string Month)
+    {
+
+    }
+
+    public class Years
     {
         public int Value { get; set; }
         public string Name { get; set; }
     }
 
-    public class BirthMonths
+    public class Months
     {
         public int Value { get; set; }
         public string Name { get; set; }
     }
 
-    public class BirthDays
+    public class Days
     {
         public int Value { get; set; }
         public string Name { get; set; }
