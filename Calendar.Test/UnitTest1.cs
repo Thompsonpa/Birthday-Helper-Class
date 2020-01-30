@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Calendar_Helper;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Calendar.Test
 {
@@ -29,5 +30,37 @@ namespace Calendar.Test
                 Console.WriteLine(t.Name + " : " + t.Value);
             }
         }
+
+        [TestMethod]
+        public void TestGetMonthDayList()
+        {
+            var January = PMTCalendar.GetMonthDayList(1,2020);
+            var Febuary = PMTCalendar.GetMonthDayList(2, 2020);
+            var March = PMTCalendar.GetMonthDayList(3, 2020);
+            var April = PMTCalendar.GetMonthDayList(4, 2020);
+            var May = PMTCalendar.GetMonthDayList(5, 2020);
+            var June = PMTCalendar.GetMonthDayList(6, 2020);
+            var July = PMTCalendar.GetMonthDayList(7, 2020);
+            var August = PMTCalendar.GetMonthDayList(8, 2020);
+            var September = PMTCalendar.GetMonthDayList(9, 2020);
+            var October = PMTCalendar.GetMonthDayList(10, 2020);
+            var November = PMTCalendar.GetMonthDayList(11, 2020);
+            var December = PMTCalendar.GetMonthDayList(12, 2020);
+
+            Console.WriteLine(January.Count(x => x.Value != 0));
+            Console.WriteLine(Febuary.Count(x => x.Value != 0));
+            Console.WriteLine(March.Count(x => x.Value != 0));
+            Console.WriteLine(April.Count(x => x.Value != 0));
+            Console.WriteLine(May.Count(x => x.Value != 0));
+            Console.WriteLine(June.Count(x => x.Value != 0));
+            Console.WriteLine(July.Count(x => x.Value != 0));
+            Console.WriteLine(August.Count(x => x.Value != 0));
+            Console.WriteLine(September.Count(x => x.Value != 0));
+            Console.WriteLine(October.Count(x => x.Value != 0));
+            Console.WriteLine(November.Count(x => x.Value != 0));
+            Console.WriteLine(December.Count(x => x.Value != 0));
+
+        }
+
     }
 }

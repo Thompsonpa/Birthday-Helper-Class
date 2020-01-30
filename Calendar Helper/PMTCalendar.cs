@@ -20,12 +20,12 @@ namespace Calendar_Helper
 
         public static List<Days> GetMonthDayList(int month, int year = 0)
         {
-            return Month.GetMonthDayList(month,year);
+            return Day.GetMonthDayList(month,year);
         }
 
         public static List<Days> GetMonthDayList(string month, string year = null)
         {
-            return Month.GetMonthDayList(Convert.ToInt32(month), Convert.ToInt32(year));
+            return Day.GetMonthDayList(Convert.ToInt32(month), Convert.ToInt32(year));
         }
 
         
