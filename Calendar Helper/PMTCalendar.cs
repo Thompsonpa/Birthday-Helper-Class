@@ -27,10 +27,7 @@ namespace Calendar_Helper
 
         public static List<Days> GetMonthDayList(int month, int year = 0)
         {
-            if (year == 0)
-            {
-                year = DateTime.Now.Year;
-            }
+            if (year == 0){year = DateTime.Now.Year;}
 
             int iMonth = month;
             int iYear = year;
@@ -40,18 +37,13 @@ namespace Calendar_Helper
 
         public static List<Days> GetMonthDayList(string month, string year = null)
         {
-            if (year == null)
-            {
-                year = DateTime.Now.Year.ToString();
-            }
+            if (year == null){year = DateTime.Now.Year.ToString();}
 
             int iMonth = Convert.ToInt32(month);
             int iYear = Convert.ToInt32(year);
 
             return Day.GetMonthDayList(iMonth, iYear);
         }
-
-        
-     
+  
     }
 }
